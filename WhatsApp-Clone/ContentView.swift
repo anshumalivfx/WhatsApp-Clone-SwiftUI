@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(0 ..< 10) {
+                    i in
+                    Text(String(i))
+                }
+            }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Chats")
+            .navigationBarItems( trailing: Button(action:{}) {
+                Image(systemName: "square.and.pencil")
+            })
+            
+        }
     }
 }
 
